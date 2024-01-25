@@ -1,0 +1,17 @@
+{% extends 'base/base_template.html' %}
+
+{% block content %}
+
+<div class="header-bar">
+    <a class="aCustom" href="{% url 'task_list' %}"><font size="5">&#8592;Back to list</font></a>
+</div>
+
+<h1> Delete </h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <p> Are you sure you want to delete "{{task}}" </p>
+    <input class="button" type="submit" value="Delete">
+</form>
+
+{% endblock content %}
